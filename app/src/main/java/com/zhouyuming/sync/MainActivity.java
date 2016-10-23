@@ -345,6 +345,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		//连接按钮
 		if(v == linkBtn){
 
+			optionFABtn.setEnabled(false);
 			InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
 			if(inputMethodManager != null){
 				inputMethodManager.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
@@ -411,6 +412,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			});
 			linkBtn.setEnabled(false);
 			reqThread.start();
+			optionFABtn.setEnabled(true);
 			return;
 		}
 
