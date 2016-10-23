@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/id_coordinatorlayout"
+	tools:context="com.zhouyuming.sync.MainActivity">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="10dp"
+		>
+
+		<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:padding="10dp"
+			>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:id="@+id/linkstate_linearLayout"
+				android:visibility="invisible"
+				android:orientation="vertical">
+
+				<ImageView
+					android:layout_width="100dp"
+					android:layout_height="100dp"
+					android:id="@+id/id_pcicon_imageview"
+					android:src="@drawable/computer"
+					android:layout_gravity="center_horizontal"
+					/>
+
+				<LinearLayout
+					android:layout_margin="7dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:orientation="horizontal">
+
+					<TextView
+						android:gravity="center_vertical"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/id_pcname_textview"
+						android:layout_gravity="center_vertical"
+						android:padding="5dp"
+						/>
+
+					<Button
+						android:layout_marginLeft="10dp"
+						android:layout_width="60dp"
+						android:layout_height="38dp"
+						android:id="@+id/id_disconnect_btn"
+						android:hapticFeedbackEnabled="true"
+						android:layout_gravity="center_vertical"
+						android:text="断开"
+						android:textColor="@color/textColor"
+						/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:id="@+id/id_verify_linearlayout"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="25dp"
+						android:layout_gravity="center_vertical"
+						android:text="链接码："/>
+
+					<EditText
+						android:layout_width="150dp"
+						android:layout_height="50dp"
+						android:textSize="20dp"
+						android:maxLength="6"
+						android:id="@+id/id_verify_edittext"
+						android:layout_gravity="center_horizontal"/>
+
+				</LinearLayout>
+
+				<Button
+					android:layout_marginTop="10dp"
+					android:layout_width="125dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/id_link_btn"
+					android:hapticFeedbackEnabled="true"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/textColor"
+					android:text="连接"
+					android:textSize="20dp"/>
+
+			</LinearLayout>
+
+		</FrameLayout>
+
+		<ImageView
+			android:padding="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/colorPrimary"
+			/>
+
+		<Button
+			android:layout_marginTop="50dp"
+			android:padding="20dp"
+			android:layout_width="300dp"
+			android:layout_height="wrap_content"
+			android:text="文件传输"
+			android:textColor="@color/textColor"
+			android:textSize="50dp"
+			android:layout_gravity="center_horizontal"
+			android:id="@+id/id_filetrans_btn"
+			/>
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/id_cloud"
+		android:visibility="gone"
+		android:background="#ffff"/>
+
+	<TextView
+		android:visibility="gone"
+		android:id="@+id/id_notificationtv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:text="点击详细设置"
+		android:textSize="10dp"
+		android:background="@color/colorPrimary"
+		android:padding="3dp"
+		android:elevation="4dp"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="300dp"
+		android:textColor="@color/textColor"/>
+
+
+	<TextView
+		android:visibility="gone"
+		android:id="@+id/id_speakertv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:text="ON"
+		android:textSize="10dp"
+		android:background="@color/colorPrimary"
+		android:padding="3dp"
+		android:elevation="4dp"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="250dp"
+		android:textColor="@color/textColor"/>
+
+	<TextView
+		android:visibility="gone"
+		android:id="@+id/id_wifitv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:text="ON"
+		android:textSize="10dp"
+		android:background="@color/colorPrimary"
+		android:padding="3dp"
+		android:elevation="4dp"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="200dp"
+		android:textColor="@color/textColor"/>
+
+	<TextView
+		android:visibility="gone"
+		android:id="@+id/id_teltv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:text="ON"
+		android:textSize="10dp"
+		android:background="@color/colorPrimary"
+		android:padding="3dp"
+		android:elevation="4dp"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="150dp"
+		android:textColor="@color/textColor"/>
+
+	<TextView
+		android:visibility="gone"
+		android:id="@+id/id_smstv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:text="ON"
+		android:textSize="10dp"
+		android:background="@color/colorPrimary"
+		android:padding="3dp"
+		android:elevation="4dp"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="100dp"
+		android:textColor="@color/textColor"/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:visibility="gone"
+		android:id="@+id/id_option1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:src="@drawable/envelope"
+		android:layout_gravity="bottom|right"
+
+		android:layout_margin="30dp"
+
+		app:backgroundTint="#57b2e7"
+		app:borderWidth="0dp"
+		app:elevation="6dp"
+		app:fabSize="mini"
+		app:pressedTranslationZ="12dp"/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:visibility="gone"
+		android:id="@+id/id_option2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:src="@drawable/tel"
+		android:layout_gravity="bottom|right"
+
+		android:layout_margin="30dp"
+
+		app:backgroundTint="#57b2e7"
+		app:borderWidth="0dp"
+		app:elevation="6dp"
+		app:fabSize="mini"
+		app:pressedTranslationZ="12dp"/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:visibility="gone"
+		android:id="@+id/id_option3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:src="@drawable/wifi"
+		android:layout_gravity="bottom|right"
+
+		android:layout_margin="30dp"
+
+		app:backgroundTint="#57b2e7"
+		app:borderWidth="0dp"
+		app:elevation="6dp"
+		app:fabSize="mini"
+		app:pressedTranslationZ="12dp"/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:visibility="gone"
+		android:id="@+id/id_option4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:src="@drawable/speaker"
+		android:layout_gravity="bottom|right"
+
+		android:layout_margin="30dp"
+
+		app:backgroundTint="#57b2e7"
+		app:borderWidth="0dp"
+		app:elevation="6dp"
+		app:fabSize="mini"
+		app:pressedTranslationZ="12dp"/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:visibility="gone"
+		android:id="@+id/id_option5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:src="@drawable/notification"
+		android:layout_gravity="bottom|right"
+
+		android:layout_margin="30dp"
+
+		app:backgroundTint="#57b2e7"
+		app:borderWidth="0dp"
+		app:elevation="6dp"
+		app:fabSize="mini"
+		app:pressedTranslationZ="12dp"/>
+
+	<TextView
+		android:visibility="gone"
+		android:id="@+id/id_settv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:text="设置"
+		android:textSize="14dp"
+		android:background="@color/colorPrimary"
+		android:padding="3dp"
+		android:elevation="4dp"
+		android:layout_margin="30dp"
+		android:layout_marginBottom="40dp"
+		android:textColor="@color/textColor"/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/id_option_fabtn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:src="@drawable/wrench"
+		android:layout_gravity="bottom|right"
+		android:layout_margin="20dp"
+
+		app:backgroundTint="#57b2e7"
+		app:borderWidth="0dp"
+		app:elevation="6dp"
+		app:fabSize="normal"
+		app:pressedTranslationZ="12dp"
+		app:layout_behavior="com.zhouyuming.sync.FABRotationBehavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+

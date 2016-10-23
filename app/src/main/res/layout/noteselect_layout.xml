@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	      android:padding="10dp"
+	      android:clickable="true"
+	      android:background="?android:attr/selectableItemBackground"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content">
+
+	<ImageView
+		android:layout_width="45dp"
+		android:layout_height="45dp"
+		android:id="@+id/appicon_iv"
+		android:src="@mipmap/ic_launcher"
+		android:layout_centerVertical="true"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/appname_tv"
+		android:textSize="20dp"
+		android:text="APP NAME"
+		android:textColor="#000000"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+		android:layout_toRightOf="@id/appicon_iv"
+		android:layout_centerVertical="true"/>
+
+	<Switch
+		android:layout_width="wrap_content"
+		android:layout_height="50dp"
+		android:paddingLeft="20dp"
+		android:id="@+id/app_switch"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"/>
+
+</RelativeLayout>
